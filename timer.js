@@ -1,6 +1,7 @@
 angular.module('timer', ['ui.router'])
-  .config(['$stateProvider', function($stateProvider) {
-    $stateProvider.state('timer', {
+  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/");
+    $stateProvider.state('index', {
       url: '/',
       templateUrl: 'timer.html',
       controller: 'TimerCtrl as timerCtrl'
@@ -9,6 +10,5 @@ angular.module('timer', ['ui.router'])
 
   .controller('TimerCtrl', function() {
     var timerCtrl = this;
-    alert('hey')
   })
 ;
