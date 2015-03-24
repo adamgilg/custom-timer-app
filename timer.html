@@ -1,7 +1,11 @@
 <h1>Hey</h1>
 <div>Set a timer</div>
 <div>
-  <input type="number"/> Seconds
-  <input type="number"/> Minutes
-  <input type="number"/> Hours
+  <label>Seconds</label>
+  <input ng-model="timerCtrl.time.seconds" type="number"/>
+  <label>Minutes</label>
+  <input ng-model="timerCtrl.time.minutes" type="number"/>
+
+  <button ng-click="timerCtrl.startTimer()">Start</button>
 </div>
+<div>{{timerCtrl.displayTime}}</div>
